@@ -1,0 +1,126 @@
+:root {
+    --background-light: #ffffff;
+    --background-dark: #0e0e0e;
+    --text-light: #0e0e0e;
+    --text-dark: #ffffff;
+    --primary: #4169E1; /* Royal Blue */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: var(--primary);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links a, .btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    color: var(--primary);
+}
+
+.section {
+    padding: 5em 2em;
+    max-width: 1000px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #f5f5f5;
+    font-size: 0.9em;
+}
+
+.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.dark-mode .header, .dark-mode footer {
+    background-color: #121212;
+}
+
+.dark-mode .nav-links a, .dark-mode .btn {
+    color: #ffffff;
+}
+
+button#toggle-mode {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input, textarea {
+    padding: 1em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
